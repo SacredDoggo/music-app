@@ -1,7 +1,9 @@
+"use client";
+
 const MusicApp = () => {
   return ( 
     <div>
-      MusicApp
+      music-app
     </div>
   );
 }
