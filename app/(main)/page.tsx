@@ -2,8 +2,8 @@
 
 const MusicApp = () => {
   return ( 
-    <div>
-      music-app
+    <div className="min-h-full">
+      musik-app
     </div>
   );
 }
