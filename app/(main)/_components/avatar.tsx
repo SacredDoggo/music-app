@@ -11,8 +11,8 @@ export const Avatar = ({ imageUrl }: AvatarProps) => {
     <Image
       src={imageUrl}
       alt="user image"
-      height={25}
-      width={25}
+      height={30}
+      width={30}
       className="rounded-full"
     />
   );

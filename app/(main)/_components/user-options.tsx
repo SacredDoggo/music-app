@@ -29,9 +29,9 @@ export const UserOptions = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm">
+        <Button variant="no_style" size="sm">
           <Avatar imageUrl={user?.hasImage ? user.imageUrl : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.winhelponline.com%2Fblog%2Freplace-default-user-account-picture-avatar-windows-10%2F&psig=AOvVaw2zoo-aqBt2N-_qago8XRXm&ust=1708672510457000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICKqqKzvoQDFQAAAAAdAAAAABAE"} />
-          <span className="ml-2">{user?.username}</span>
+          <span className="ml-2">{user?.fullName}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -41,7 +41,9 @@ export const UserOptions = () => {
       >
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={userProfile.onOpen}><Settings2Icon className="h-4 w-4 mr-2" />Manage account</DropdownMenuItem>
+        <DropdownMenuItem onClick={userProfile.onOpen}>
+          <Settings2Icon className="h-4 w-4 mr-2" />Manage account
+        </DropdownMenuItem>
         <SignOutButton>
           <DropdownMenuItem>
             <LogOutIcon className="h-4 w-4 mr-2" />Logout
@@ -57,9 +59,9 @@ export const UserOptions = () => {
 
 UserOptions.Skeleton = function () {
   return (
-    <div className="flex items-center gap-x-2">
+    <Button variant="no_style" className="flex items-center gap-x-2">
       <Avatar.Skeleton />
-      <Skeleton className="h-4 w-40" />
-    </div>
+      <Skeleton className="h-4 w-32 " />
+    </Button>
   );
 }
