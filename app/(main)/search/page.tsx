@@ -1,11 +1,9 @@
 "use client";
 
-import { HomePage } from "./_components/home-page";
-
 const MusicApp = () => {
   return ( 
-    <div>
-      <HomePage />
+    <div className="min-h-full">
+      search
     </div>
   );
 }

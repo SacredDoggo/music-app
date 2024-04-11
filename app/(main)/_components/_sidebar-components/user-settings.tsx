@@ -1,7 +1,6 @@
 
 "use client";
 import { LogOutIcon, Settings2Icon } from "lucide-react";
-import { useConvexAuth } from "convex/react";
 import { SignOutButton, useUser } from "@clerk/clerk-react";
 
 import { Button } from "@/components/ui/button";
@@ -20,8 +19,7 @@ import { Avatar } from "./avatar";
 import { useUserProfile } from "@/hooks/use-user-profile";
 
 
-export const UserOptions = () => {
-  const { isLoading, isAuthenticated } = useConvexAuth();
+export const UserSettings = () => {
   const { user } = useUser();
 
   const userProfile = useUserProfile();
@@ -50,14 +48,14 @@ export const UserOptions = () => {
           </DropdownMenuItem>
         </SignOutButton>
         <DropdownMenuSeparator />
-        <span className="text-xs text-muted-foreground">Last Signin: {user?.lastSignInAt?.toDateString() }</span>
+        <span className="text-xs text-muted-foreground">Last login: {user?.lastSignInAt?.toDateString() }</span>
       </DropdownMenuContent>
     </DropdownMenu>
 
   );
 };
 
-UserOptions.Skeleton = function () {
+UserSettings.Skeleton = function () {
   return (
     <Button variant="no_style" className="flex items-center gap-x-2">
       <Avatar.Skeleton />
