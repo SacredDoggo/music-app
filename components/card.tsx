@@ -4,7 +4,7 @@ interface CardProps {
   id: string;
   name: string;
   image: string;
-  description: AlbumArtistResponse[];
+  description: string;
   onClick?: (id: string) => void;
 }
 
@@ -15,17 +15,16 @@ export const Card = ({
   description,
   onClick
 }: CardProps) => {
-  const names = description.map(artist => artist.name);
 
   return (
     <div 
       role="button"
       onClick={() => onClick?.(id)}
-      className="flex flex-col items-center min-w-44 max-w-44 p-2"
+      className="flex flex-col items-center min-w-44 max-w-44 p-2 bg-secondary rounded-md border-lime-100 border-2"
     >
       <Image src={image as string} alt={name} width={150} height={150} className="rounded-sm" />
       <span className="truncate text-sm max-w-32">{name}</span>
-      <p className="text-xs text-muted-foreground truncate max-w-32">{names.join(", ")}</p>
+      <p className="text-xs text-muted-foreground truncate max-w-32">{description}</p>
     </div>
   );
 }

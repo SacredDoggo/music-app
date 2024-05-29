@@ -1,7 +1,7 @@
 
 "use client";
 import { LogOutIcon, Settings2Icon } from "lucide-react";
-import { SignOutButton, useUser } from "@clerk/clerk-react";
+import { SignOutButton, useClerk, useUser } from "@clerk/clerk-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,13 +16,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 import { Avatar } from "./avatar";
 
-import { useUserProfile } from "@/hooks/use-user-profile";
-
-
 export const UserSettings = () => {
   const { user } = useUser();
 
-  const userProfile = useUserProfile();
+  const { openUserProfile } = useClerk();
 
   return (
     <DropdownMenu>
@@ -39,7 +36,7 @@ export const UserSettings = () => {
       >
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={userProfile.onOpen}>
+        <DropdownMenuItem onClick={() => openUserProfile()}>
           <Settings2Icon className="h-4 w-4 mr-2" />Manage account
         </DropdownMenuItem>
         <SignOutButton>
@@ -59,7 +56,7 @@ UserSettings.Skeleton = function () {
   return (
     <Button variant="no_style" className="flex items-center gap-x-2">
       <Avatar.Skeleton />
-      <Skeleton className="h-4 w-32 " />
+      <Skeleton className="h-4 w-32 bg-primary/10" />
     </Button>
   );
 }

@@ -1,7 +1,7 @@
-import { UserOptions } from "./_sidebar-components/user-options";
-import { UserLibrary } from "./_sidebar-components/user-library";
-import { MusicLanguageSelector } from "./_sidebar-components/music-language-selector";
-import { NavMenu } from "./_sidebar-components/nav-menu";
+import { UserOptions } from "./sidebar-components/user-options";
+import { UserLibrary } from "./sidebar-components/user-library";
+import { MusicLanguageSelector } from "./sidebar-components/music-language-selector";
+import { NavMenu } from "./sidebar-components/nav-menu";
 
 export const Sidebar = () => {
   return (

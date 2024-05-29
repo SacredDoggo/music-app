@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 
-import { UserProfileModal } from "@/components/modals/user-profile-modal";
-
 const ModalProvider = () => {
   const [mounted, setMounted] = useState(false);
 
@@ -15,7 +13,6 @@ const ModalProvider = () => {
 
   return (
     <>
-      <UserProfileModal />
     </>
   );
 };
