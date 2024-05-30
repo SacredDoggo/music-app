@@ -1,7 +1,7 @@
 export default {
     providers: [
       {
-        domain: process.env.CLERK_JWT_ISSUER_DOMAIN,
+        domain: "https://verified-parakeet-42.clerk.accounts.dev1",
         applicationID: "convex",
       },
     ],
