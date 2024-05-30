@@ -8,12 +8,49 @@ body,
   height: 100%;
 }
 
+
+.rhap_controls-section {
+  margin-bottom: 15px;
+}
+
+.rhap_progress-section {
+  height: 20px;
+  padding-bottom: 20px;
+}
+
+.rhap_main-controls-button {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.rhap_main-controls-button {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+
+
+.rhap_progress-filled,
+.rhap_progress-indicator {
+  background-color: #ff5555 !important;
+}
+
+
+.rhap_volume-bar, .rhap_volume-indicator {
+  background-color: red;
+}
+
 * {
   scrollbar-width: thin;
 }
 
 @layer base {
   :root {
+    .rhap_container {
+      background: #f7f7f9;
+      height: 16vh;
+    }
+
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
 
@@ -46,6 +83,22 @@ body,
   }
 
   .dark {
+    .rhap_container {
+      background: #1F1F1F;
+      height: 16vh;
+    }
+    .rhap_time {
+      color: white;
+    }
+    .rhap_button-clear.rhap_volume-button {
+      color: white;
+    }
+    .rhap_main-controls-button svg {
+      color: white;
+      width: 100%;
+      height: 100%;
+    }
+
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
 

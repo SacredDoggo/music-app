@@ -20,6 +20,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "pli.saavncdn.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   compiler: {

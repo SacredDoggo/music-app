@@ -4,6 +4,7 @@ interface CardProps {
   id: string;
   name: string;
   image: string;
+  type: string;
   description: string;
   onClick?: (id: string) => void;
 }
@@ -12,6 +13,7 @@ export const Card = ({
   id,
   name,
   image,
+  type,
   description,
   onClick
 }: CardProps) => {
