@@ -52,7 +52,7 @@ export const UserSettings = () => {
   );
 };
 
-UserSettings.Skeleton = function () {
+UserSettings.Skeleton = function UserSettingsSkeleton() {
   return (
     <Button variant="no_style" className="flex items-center gap-x-2">
       <Avatar.Skeleton />

@@ -18,7 +18,7 @@ export const Avatar = ({ imageUrl }: AvatarProps) => {
   );
 };
 
-Avatar.Skeleton = function () {
+Avatar.Skeleton = function AvatarSkeleton() {
   return (
     <Skeleton className="h-[30px] w-[30px] rounded-full bg-primary/10" />
   );

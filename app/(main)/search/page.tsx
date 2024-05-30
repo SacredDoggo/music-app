@@ -34,7 +34,7 @@ const SearchPage = () => {
   }
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col w-full">
       <SearchBar handleChange={handleChange} loading={loading} searchText={searchText} />
       {!!result && (
           <SearchResults data={result} />
