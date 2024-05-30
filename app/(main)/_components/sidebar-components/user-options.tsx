@@ -17,13 +17,11 @@ export const UserOptions = () => {
             <Button
               variant="ghost"
               size="sm"
-              asChild
             >
                 Sign up
             </Button>
             <Button
               size="sm"
-              asChild
             >
                 Login
             </Button>
