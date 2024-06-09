@@ -37,7 +37,7 @@ body,
   :root {
     .rhap_container {
       background: #f7f7f9;
-      height: 16vh;
+      height: 120px;
     }
 
     --background: 0 0% 100%;
@@ -74,7 +74,7 @@ body,
   .dark {
     .rhap_container {
       background: #1F1F1F;
-      height: 16vh;
+      height: 120px;
     }
 
     .rhap_time {

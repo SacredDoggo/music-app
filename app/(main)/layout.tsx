@@ -10,7 +10,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={cn(
       "flex h-full dark:bg-[#1F1F1F]",
-      player.song && "pb-[16vh]"
+      player.song && "pb-[120px]"
     )}>
       <Sidebar />
       <main className="w-full h-full flex-1 overflow-y-auto rounded-t-sm">
