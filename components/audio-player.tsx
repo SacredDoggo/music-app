@@ -15,7 +15,6 @@ export const Player = () => {
             autoPlay
             src={player.song.downloadUrl[4].url}
             className="fixed bottom-0"
-            
         />
     );
 }
