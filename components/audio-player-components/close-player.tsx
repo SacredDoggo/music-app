@@ -18,7 +18,7 @@ export const ClosePlayer = () => {
             variant="ghost"
             onClick={player.cancelPlayback}
           >
-            <XIcon className="light:text-muted-foreground" />
+            <XIcon className="text-muted-foreground dark:text-foreground" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>

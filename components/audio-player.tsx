@@ -19,7 +19,7 @@ export const Player = () => {
             customAdditionalControls={
                 [
                   RHAP_UI.LOOP,
-                  <ClosePlayer />
+                  <ClosePlayer key={player.song.id} />
                 ]
               }
         />
